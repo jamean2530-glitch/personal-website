@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>อนุชิต อินธิเสน | แนะนำตัว</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-icon">🍳</span> อนุชิต
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero" class="nav-link active">หน้าแรก</a></li>
+                <li><a href="#about" class="nav-link">เกี่ยวกับ</a></li>
+                <li><a href="#hobby" class="nav-link">สิ่งที่ชอบ</a></li>
+                <li><a href="#skills" class="nav-link">ทักษะ</a></li>
+                <li><a href="#contact" class="nav-link">ติดต่อ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <canvas id="particleCanvas"></canvas>
+        <div class="hero-content">
+            <div class="hero-image-wrapper">
+                <img src="images/profile.jpg" alt="อนุชิต อินธิเสน" class="hero-image">
+                <div class="hero-image-ring"></div>
+            </div>
+            <p class="hero-greeting">สวัสดีครับ 👋 ผมชื่อ</p>
+            <h1 class="hero-name">
+                <span class="name-line">อนุชิต</span>
+                <span class="name-line accent">อินธิเสน</span>
+            </h1>
+            <div class="hero-tagline">
+                <span class="tagline-icon">🍳</span>
+                <span id="typewriter" class="typewriter-text"></span>
+                <span class="cursor">|</span>
+            </div>
+            <div class="hero-buttons">
+                <a href="#about" class="btn btn-primary"><i class="fas fa-user"></i> รู้จักผม</a>
+                <a href="#contact" class="btn btn-glass"><i class="fas fa-paper-plane"></i> ติดต่อผม</a>
+            </div>
+        </div>
+        <div class="scroll-down" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+            <div class="mouse"><div class="wheel"></div></div>
+            <span>เลื่อนลง</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-icon">👤</span>
+                เกี่ยวกับผม
+            </h2>
+            <div class="about-grid">
+                <div class="about-card profile-card">
+                    <img src="images/profile.jpg" alt="อนุชิต" class="about-photo">
+                    <h3>อนุชิต อินธิเสน</h3>
+                    <p class="about-role">เด็กหนุ่มวัย 19 ผู้หลงรักไข่เจียว</p>
+                    <div class="social-links">
+                        <a href="https://github.com/jame-anuchit" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="mailto:jamean2530@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="about-details">
+                    <div class="about-text">
+                        <p>
+                            สวัสดีครับ! ผมชื่อ <strong>อนุชิต อินธิเสน</strong> อายุ <strong>19 ปี</strong> 
+                            เป็นคนที่รักการเรียนรู้สิ่งใหม่ๆ และมีความหลงใหลในเทคโนโลยี
+                        </p>
+                        <p>
+                            นอกจากเรื่องเทคโนโลยีแล้ว สิ่งที่ผมรักเป็นพิเศษคือ <strong>ไข่เจียว</strong> 🍳 
+                            ไม่ว่าจะเป็นไข่เจียวหมูสับ ไข่เจียวปู หรือไข่เจียวธรรมดาใส่น้ำปลา 
+                            ผมพร้อมกินได้ทุกมื้อ ทุกวัน ไม่มีเบื่อ!
+                        </p>
+                    </div>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-user"></i></div>
+                            <div>
+                                <span class="info-label">ชื่อ</span>
+                                <span class="info-value">อนุชิต อินธิเสน</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-birthday-cake"></i></div>
+                            <div>
+                                <span class="info-label">อายุ</span>
+                                <span class="info-value">19 ปี</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-heart"></i></div>
+                            <div>
+                                <span class="info-label">อาหารโปรด</span>
+                                <span class="info-value">ไข่เจียว 🍳</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <span class="info-label">ที่อยู่</span>
+                                <span class="info-value">ประเทศไทย 🇹🇭</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobby Section (ไข่เจียว) -->
+    <section class="section section-alt" id="hobby">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-icon">🍳</span>
+                สิ่งที่ผมชอบ
+            </h2>
+            <div class="hobby-grid">
+                <div class="hobby-card">
+                    <div class="hobby-emoji">🍳</div>
+                    <h3>ไข่เจียวหมูสับ</h3>
+                    <p>เมนูโปรดอันดับ 1 กรอบนอก นุ่มใน ใส่หมูสับเต็มๆ ราดข้าวสวยร้อนๆ สุดยอดครับ!</p>
+                    <div class="hobby-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-emoji">🦀</div>
+                    <h3>ไข่เจียวปู</h3>
+                    <p>เมนูพิเศษ เนื้อปูหวานๆ ผสมไข่ฟูๆ ทอดกรอบ เหมาะสำหรับวันดีๆ!</p>
+                    <div class="hobby-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-emoji">🥚</div>
+                    <h3>ไข่เจียวธรรมดา</h3>
+                    <p>เรียบง่ายแต่อร่อยที่สุด ไข่ + น้ำปลา + พริก แค่นี้ก็ฟินแล้วครับ!</p>
+                    <div class="hobby-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-emoji">💻</div>
+                    <h3>เขียนโค้ด</h3>
+                    <p>นอกจากไข่เจียวแล้ว ผมยังชอบเขียนโปรแกรมและเรียนรู้เทคโนโลยีใหม่ๆ อีกด้วย!</p>
+                    <div class="hobby-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-icon">⚡</span>
+                ทักษะของผม
+            </h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon" style="--skill-color: #e34c26"><i class="fab fa-html5"></i></div>
+                    <h4>HTML5</h4>
+                    <div class="skill-bar"><div class="skill-fill" data-width="85" style="--bar-color: #e34c26"></div></div>
+                    <span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon" style="--skill-color: #264de4"><i class="fab fa-css3-alt"></i></div>
+                    <h4>CSS3</h4>
+                    <div class="skill-bar"><div class="skill-fill" data-width="80" style="--bar-color: #264de4"></div></div>
+                    <span class="skill-percent">80%</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon" style="--skill-color: #f0db4f"><i class="fab fa-js"></i></div>
+                    <h4>JavaScript</h4>
+                    <div class="skill-bar"><div class="skill-fill" data-width="75" style="--bar-color: #f0db4f"></div></div>
+                    <span class="skill-percent">75%</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon" style="--skill-color: #306998"><i class="fab fa-python"></i></div>
+                    <h4>Python</h4>
+                    <div class="skill-bar"><div class="skill-fill" data-width="70" style="--bar-color: #306998"></div></div>
+                    <span class="skill-percent">70%</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon" style="--skill-color: #f34f29"><i class="fab fa-git-alt"></i></div>
+                    <h4>Git</h4>
+                    <div class="skill-bar"><div class="skill-fill" data-width="75" style="--bar-color: #f34f29"></div></div>
+                    <span class="skill-percent">75%</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon" style="--skill-color: #ff9900"><i class="fas fa-egg"></i></div>
+                    <h4>ทำไข่เจียว</h4>
+                    <div class="skill-bar"><div class="skill-fill" data-width="100" style="--bar-color: #ff9900"></div></div>
+                    <span class="skill-percent">100%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section-alt" id="contact">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-icon">📬</span>
+                ติดต่อผม
+            </h2>
+            <p class="section-subtitle">อยากคุยเรื่องไข่เจียว เรื่องโค้ด หรือเรื่องอะไรก็ได้ ทักมาได้เลยครับ!</p>
+            <div class="contact-grid">
+                <a href="mailto:jamean2530@gmail.com" class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <h4>อีเมล</h4>
+                    <p>jamean2530@gmail.com</p>
+                </a>
+                <a href="https://github.com/jame-anuchit" target="_blank" class="contact-card">
+                    <div class="contact-icon"><i class="fab fa-github"></i></div>
+                    <h4>GitHub</h4>
+                    <p>jame-anuchit</p>
+                </a>
+                <a href="#" class="contact-card">
+                    <div class="contact-icon"><i class="fab fa-facebook"></i></div>
+                    <h4>Facebook</h4>
+                    <p>ติดตามผมได้เลย</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">สร้างด้วย ❤️ และ 🍳 โดย <strong>อนุชิต อินธิเสน</strong></p>
+                <p class="footer-copy">&copy; 2026 All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
